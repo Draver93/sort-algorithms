@@ -24,12 +24,11 @@ int main()
 
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 		std::cout << "Bubble sorting algorithm execution time: " << duration.count() << " milliseconds, array size: "<< DATA_SET_SIZE  << std::endl;
-		// Result: Bubble sorting algorithm execution time: 1579 milliseconds, array size: 10000
 
 		sorted_data_set = data;
 	}
 
-	//Insertion Sorting 
+	//Insertion Sorting
 	{
 		auto start = std::chrono::high_resolution_clock::now();
 
@@ -40,12 +39,10 @@ int main()
 
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 		std::cout << "Insertion(with erase insert) sorting algorithm execution time: " << duration.count() << " milliseconds, array size: " << DATA_SET_SIZE << std::endl;
-		// Result: Insertion(with erase insert) sorting algorithm execution time: 130 milliseconds, array size: 10000
 
 		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
 	}
 
-	//Insertion Sorting 
 	{
 		auto start = std::chrono::high_resolution_clock::now();
 
@@ -56,7 +53,6 @@ int main()
 
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 		std::cout << "Insertion(with shifting) sorting algorithm execution time: " << duration.count() << " milliseconds, array size: " << DATA_SET_SIZE << std::endl;
-		// Result: Insertion(with shifting) sorting algorithm execution time: 280 milliseconds, array size: 10000
 
 		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
 	}
