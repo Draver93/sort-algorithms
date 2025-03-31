@@ -1,7 +1,6 @@
 #include "Sort.h"
 
 
-
 namespace sort {
 	void insertion_type1(std::vector<int>& arr) {
 		if (arr.size() < 2) return;

@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 
+
 namespace sort {
 	void selection(std::vector<int>& arr);
 	void insertion_type1(std::vector<int>& arr);
