@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sort\BubbleSort.cpp" />
+    <ClCompile Include="Sort\InsertionSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort\Sort.h" />

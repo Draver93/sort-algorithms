@@ -5,6 +5,9 @@
     <ClCompile Include="Sort\BubbleSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
+    <ClCompile Include="Sort\InsertionSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sort">
