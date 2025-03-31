@@ -2,5 +2,18 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sort\BubbleSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Sort">
+      <UniqueIdentifier>{05ed1726-6a87-46e4-8030-ff9e1ff23d66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sort\Sort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
