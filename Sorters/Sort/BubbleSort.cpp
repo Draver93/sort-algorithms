@@ -3,7 +3,6 @@
 
 namespace sort {
 	void bubble(std::vector<int>& arr) {
-
 		bool changed = false;
 		do {
 			changed = false;
@@ -18,6 +17,5 @@ namespace sort {
 
 			}
 		} while (changed);
-
 	}
 }
