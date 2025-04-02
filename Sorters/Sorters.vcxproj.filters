@@ -13,6 +13,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
+    <ClCompile Include="Sort\MergeSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sort">
