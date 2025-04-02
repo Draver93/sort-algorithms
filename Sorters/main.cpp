@@ -61,7 +61,6 @@ int main()
 		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
 	}
 
-
 	//Selection Sorting 
 	{
 		auto start = std::chrono::high_resolution_clock::now();
