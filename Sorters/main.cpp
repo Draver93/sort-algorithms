@@ -73,7 +73,7 @@ int main()
 
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 		std::cout << "Selection sorting algorithm execution time: " << duration.count() << " milliseconds, array size: " << DATA_SET_SIZE << std::endl;
-		// Result: Insertion(with shifting) sorting algorithm execution time: 280 milliseconds, array size: 10000
+		// Result: Selection sorting algorithm execution time: 554 milliseconds, array size: 10000
 
 		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
 	}
