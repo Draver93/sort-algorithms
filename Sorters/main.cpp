@@ -93,5 +93,22 @@ int main()
 		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
 	}
 
+	//Quick Sorting 
+	{
+		auto start = std::chrono::high_resolution_clock::now();
+
+		std::vector<int> data = data_set;
+		sort::quick(data);
+
+		auto end = std::chrono::high_resolution_clock::now();
+
+		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+		std::cout << "Quick sorting algorithm execution time: " << duration.count() << " milliseconds, array size: " << DATA_SET_SIZE << std::endl;
+		// Result: Quick sorting algorithm execution time : 27 milliseconds, array size : 10000
+
+		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
+	}
+
+
 	return 0;
 }
