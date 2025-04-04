@@ -19,6 +19,9 @@
     <ClCompile Include="Sort\QuickSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
+    <ClCompile Include="Sort\HeapSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sort">

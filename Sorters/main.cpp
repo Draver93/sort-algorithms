@@ -2,6 +2,7 @@
 
 #include <chrono>
 #include <cassert>
+#include <algorithm>
 
 
 int main()
@@ -109,6 +110,37 @@ int main()
 		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
 	}
 
+	//Heap Sorting 
+	{
+		auto start = std::chrono::high_resolution_clock::now();
+
+		std::vector<int> data = data_set;
+		sort::heap(data);
+
+		auto end = std::chrono::high_resolution_clock::now();
+
+		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+		std::cout << "Heap sorting algorithm execution time: " << duration.count() << " milliseconds, array size: " << DATA_SET_SIZE << std::endl;
+		// Result: Heap sorting algorithm execution time: 5 milliseconds, array size: 10000
+
+		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
+	}
+
+	//STL Sorting 
+	{
+		auto start = std::chrono::high_resolution_clock::now();
+
+		std::vector<int> data = data_set;
+		std::sort(data.begin(), data.end());
+
+		auto end = std::chrono::high_resolution_clock::now();
+
+		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+		std::cout << "STL sorting algorithm execution time: " << duration.count() << " milliseconds, array size: " << DATA_SET_SIZE << std::endl;
+		// Result: STL sorting algorithm execution time: 3 milliseconds, array size: 10000
+
+		assert(std::equal(data.begin(), data.end(), sorted_data_set.begin()));
+	}
 
 	return 0;
 }
