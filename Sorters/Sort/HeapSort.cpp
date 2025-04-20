@@ -1,7 +1,7 @@
 #include "Sort.h"
 
 
-void heapify(std::vector<int>& arr, int pos, int size) {
+void heapify(std::array<int, DATA_SET_SIZE>& arr, int pos, int size) {
 	int large_id = pos;
 	int left = 1 + pos * 2;
 	int right = 2 + pos * 2;
@@ -17,7 +17,7 @@ void heapify(std::vector<int>& arr, int pos, int size) {
 
 namespace sort {
 	
-	void heap(std::vector<int>& arr) {
+	void heap(std::array<int, DATA_SET_SIZE>& arr) {
 		int heap_size = arr.size();
 
 		for (int i = heap_size / 2 - 1; i >= 0; i--) {

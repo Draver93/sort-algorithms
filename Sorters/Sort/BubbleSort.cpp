@@ -2,7 +2,7 @@
 
 
 namespace sort {
-	void bubble(std::vector<int>& arr) {
+	void bubble(std::array<int, DATA_SET_SIZE>& arr) {
 		bool changed = false;
 		do {
 			changed = false;

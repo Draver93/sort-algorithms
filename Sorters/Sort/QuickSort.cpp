@@ -1,13 +1,13 @@
 #include "Sort.h"
 
 
-void _quick(std::vector<int>& arr) {
-	if (arr.size() < 2) return;
+void _quick(int* arr, size_t size) {
+	if (size < 2) return;
 
 	int pivot_id = 0;
 	int pivot = arr[pivot_id];
 
-	int i = 1, j = arr.size() - 1;
+	int i = 1, j = size - 1;
 	while (i <= j) {
 		if (arr[i] < pivot) i++;
 		else if (arr[j] >= pivot) j--;
@@ -17,21 +17,16 @@ void _quick(std::vector<int>& arr) {
 	std::swap(arr[j], arr[pivot_id]);
 	pivot_id = j;
 	
-	std::vector<int> left(arr.begin(), arr.begin() + pivot_id);
-	_quick(left);
+	int* left = arr;
+	_quick(left, pivot_id);
 
-	std::vector<int> right(arr.begin() + pivot_id + 1, arr.end());
-	_quick(right);
-
-	arr.clear();
-	arr.insert(arr.end(), left.begin(), left.end());
-	arr.push_back(pivot);
-	arr.insert(arr.end(), right.begin(), right.end());
+	int* right = arr + (pivot_id + 1);
+	_quick(right, size - (pivot_id + 1));
 }
 
 namespace sort {
 	
-	void quick(std::vector<int>& arr) {
-		_quick(arr);
+	void quick(std::array<int, DATA_SET_SIZE>& arr) {
+		_quick(arr.data(), arr.size());
 	}
 }

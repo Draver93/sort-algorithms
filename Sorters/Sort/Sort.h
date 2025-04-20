@@ -1,15 +1,15 @@
 #pragma once
 
-#include <vector>
+#include <array>
 #include <iostream>
 
+static const int DATA_SET_SIZE = 100000; //stack overflow)
 
 namespace sort {
-	void selection(std::vector<int>& arr);
-	void insertion_type1(std::vector<int>& arr);
-	void insertion_type2(std::vector<int>& arr);
-	void bubble(std::vector<int>& arr);
-	void quick(std::vector<int>& arr);
-	void merge(std::vector<int>& arr);
-	void heap(std::vector<int>& arr);
+	void selection(std::array<int, DATA_SET_SIZE>& arr);
+	void insertion(std::array<int, DATA_SET_SIZE>& arr);
+	void bubble(std::array<int, DATA_SET_SIZE>& arr);
+	void quick(std::array<int, DATA_SET_SIZE>& arr);
+	void merge(std::array<int, DATA_SET_SIZE>& arr);
+	void heap(std::array<int, DATA_SET_SIZE>& arr);
 }

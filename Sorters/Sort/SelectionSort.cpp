@@ -3,7 +3,7 @@
 
 namespace sort {
 	
-	void selection(std::vector<int>& arr) {
+	void selection(std::array<int, DATA_SET_SIZE>& arr) {
 		for (int i = 0; i < arr.size() - 1; i++) {
 			int min_id = i;
 			

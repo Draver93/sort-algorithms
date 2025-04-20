@@ -1,28 +1,35 @@
 #include "Sort.h"
 
 
-void _merge(std::vector<int>& arr) {
-	if (arr.size() < 2) return;
+void _merge(int *arr, size_t size) {
+	if (size < 2) return;
 
-	std::vector<int> left(arr.begin(), arr.begin() + arr.size() / 2);
-	std::vector<int> right(arr.begin() + arr.size() / 2, arr.begin() + arr.size());
-	_merge(left);
-	_merge(right);
+	int* left = arr;
+	size_t left_size = size / 2;
 
-	int i = 0, j = 0, k = 0;
-	while (i < left.size() || j < right.size()) {
-		if(i >= left.size()) arr[k++] = right[j++];
-		else if (j >= right.size()) arr[k++] = left[i++];
-		else {
-			if (left[i] <= right[j]) arr[k++] = left[i++];
-			else arr[k++] = right[j++];
-		}
+	int* right = arr + (size / 2);
+	size_t right_size = (size / 2);
+
+	_merge(left, left_size);
+	_merge(right, right_size);
+
+	size_t pos = size / 2;
+	while (pos < size) {
+
+		size_t shift_pos = pos;
+		while (shift_pos > 0)
+			if (arr[shift_pos] < arr[shift_pos - 1]) {
+				std::swap(arr[shift_pos], arr[shift_pos - 1]);
+				shift_pos--;
+			} else break;
+
+		pos++;
 	}
 }
 
 namespace sort {
 	
-	void merge(std::vector<int>& arr) {
-		_merge(arr);
+	void merge(std::array<int, DATA_SET_SIZE>& arr) {
+		_merge(arr.data(), arr.size());
 	}
 }
