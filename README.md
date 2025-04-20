@@ -7,8 +7,7 @@ This repository is a learning-focused project aimed at understanding and compari
 The following sorting algorithms are included in this project:
 
 - **Bubble Sort**
-- **Insertion Sort (Type 1: Using erase and insert)**
-- **Insertion Sort (Type 2: Using shifting)**
+- **Insertion Sort**
 - **Selection Sort**
 - **Merge Sort**
 - **Quick Sort**
@@ -17,20 +16,19 @@ The following sorting algorithms are included in this project:
 
 ## Performance Benchmarking
 
-The program runs each sorting algorithm on a dataset of 10,000 randomly generated integers and measures execution time in milliseconds. This helps in understanding the efficiency of each algorithm in practical scenarios.
+The program runs each sorting algorithm on a dataset of 100,000 randomly generated integers and measures execution time in milliseconds. This helps in understanding the efficiency of each algorithm in practical scenarios.
 
 ### Sample Execution Results:
 
 | Sorting Algorithm | Execution Time (ms) |
 |------------------|------------------|
-| Bubble Sort | 1579 |
-| Insertion Sort (Type 1) | 130 |
-| Insertion Sort (Type 2) | 280 |
-| Selection Sort | 554 |
-| Merge Sort | 30 |
-| Quick Sort | 27 |
-| Heap Sort | 5 |
-| STL Sort | 3 |
+| Bubble Sort | 12489 |
+| Insertion Sort | 883 |
+| Selection Sort | 3249 |
+| Merge Sort | 1545 |
+| Quick Sort | 6 |
+| Heap Sort | 8 |
+| STL Sort | 6 |
 
 ## How to Run the Code in Visual Studio
 
