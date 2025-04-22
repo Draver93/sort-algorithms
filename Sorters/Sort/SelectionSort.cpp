@@ -10,7 +10,7 @@ namespace sort {
 			for (int j = i + 1; j < arr.size(); j++)
 				if (arr[min_id] > arr[j]) min_id = j;
 
-			std::swap(arr[i], arr[min_id]);
+			if(i != min_id) std::swap(arr[i], arr[min_id]);
 		}
 	}
 }
